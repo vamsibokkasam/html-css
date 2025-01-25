@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body bgcolor="grey">
+    <script>
+        function validateForm() {
+            let x = document.myForm.fname.value;
+            let y = document.myForm.phno.value;
+            
+            if (isNaN(y) || y=="") {
+                alert("Phone number must be in digits and not be empty");
+                return false;
+            }
+            if(y.length !=10)
+            {
+                alert("Please enter 10 digits number")
+                return false;
+            }
+            
+        }
+    </script>
+    <form method="post" name="myForm" onsubmit="return validateForm()">
+        <h1><marquee behavior="" direction="right" style="color:blue; background-color:antiquewhite;">Mother Theresa
+            Institute of Engineering and Technology</marquee></h1><br><br><br>
+        <h1>
+            <center>
+                <font color="purple"><b><pre>       <u>Register Form</u></pre></b></font>
+            </center>
+        </h1>
+        <pre><center>
+            Name    :-<input name="fname" type="text" required><br>
+            Address :-<input name="faddress" type="text"><br>
+            Phone No:-<input name="phno" type="text"><br>
+    
+
+                <input name="sumbit" type="submit">
+    </center>
+</pre>
+    </form>
+</body>
+
+</html>
